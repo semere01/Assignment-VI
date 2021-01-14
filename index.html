@@ -1,207 +1,154 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<link rel = "stylesheet" type = "text/css" href = "Assets/CSS/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><!-- Importing JQuery -->
-	<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script><!-- Importing Popper -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><!-- Importing Bootstrap -->
-	<!-- Importing Google Fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300&display=swap" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<style>
-		.parallax {
-		/* The image used */
-		background-image: url("Assets/Images/Me2 - Copy.jpg");
+		html,body{ height:98%; }
+.master-grid {
+	height:100%;
+  display: grid;
+  grid-gap: 10px;
+  padding: 10px;
+}
 
-		/* Set a specific height */
-		min-height: 28.125rem; 
+.master-grid-item {
+	height:95%;
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
 
-		/* Create the parallax scrolling effect */
-		background-attachment: fixed;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		}
+.sidenavbar {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.main {
+	overflow-y: auto;
+  grid-column: 2 / span 10;
+  grid-row: 1 ;
+}
+
+.about-grid{
+	display: grid;
+  grid-gap: 10px;
+  padding: 10px;
+  /*background-color: #2196F3;*/
+}
+
+.about-header{
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  grid-column: 1 / span 10;
+  grid-row: 1;
+}
+.about-body{
+	/*width:50%;*/
+  background-color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+	grid-column: 3 / span 4;
+	grid-row: 2 / span 2;
+	}
+.about-side{
+  background-color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+	grid-column:7/ span 2;
+}
+.content-paragraph{
+	font-family: "Book Antiqua",Georgia,serif;
+    /*font-size: 18px;*/
+    font-size: 1.125rem;
+    /*line-height: 30px;*/
+    line-height: 1.875rem;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-left:18%;
+    padding-right:18%;
+    text-align: justify;
+	  text-justify: inter-word;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("Assets/images/k3.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.my-name{
+    font-size: 2.625rem;
+    /*line-height: 1.875rem;*/
+    display: block;
+    font-family: "Trebuchet MS","Arial Narrow",Arial,sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #000;
+    transition: 0.2s color linear;
+
+}
+.git-icon{
+	background-image: url("Assets/images/git/regular.jpg");
+
+  /* Full height */
+  height: 50%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.git-icon:hover {
+	background-image: url("Assets/images/git/solid.jpg");
+}
+.resume-icon{
+	background-image: url("Assets/images/resume/regular.jpg");
+
+  /* Full height */
+  height: 50%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.resume-icon:hover {
+	background-image: url("Assets/images/resume/solid.jpg");
+}
+
+
+
 	</style>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<title> Semere Tereffe </title>
 <body>
-	<div class="parallax"></div>
-	<!-- Sidebar -->
-	<div class="w3-sidebar w3-white w3-bar-block" style="width:12%" id = "fixed">
-			<a href="#" class="w3-bar-item w3-button"><img src = "Assets/Images/aboutSB.PNG" alt = "About-side-bar" width = 178.125rem height = 93.75rem></a>
-			<a href="#two" class="w3-bar-item w3-button"><img src = "Assets/Images/workSB.PNG" alt = "About-side-bar" width = 178.125rem height = 93.75rem></a>
-			<a href="#three" class="w3-bar-item w3-button"><img src = "Assets/Images/contactSB.PNG" alt = "About-side-bar" width = 178.125rem height = 93.75rem></a>
-			<a href="blog.html" class="w3-bar-item w3-button"><img src = "Assets/Images/blogSB.PNG" alt = "About-side-bar" width = 178.125rem height = 93.75rem></a>
-	</div>
-	<div class = "all" style = "max-width: 88%; position:absolute; right:0;">
-		<div class = "container-fluid">
-			<div class = "row">
-				<div class = "col-lg-2"></div>
-				<div class = "col-lg-8">
-					<!-- About Starts Here -->
-					<div>
-						<div class="container-fluid">
-							<div class="row">
-								<div class = "col-lg-12" align = center>
-									<h3 id = "one"> Semere Tereffe </h3>
-								</div>
-							</div>
-							<div class = "row">
-								<div class="col-sm-3 col-md-6 col-lg-9">
-									<p>I believe I have been lucky enough to major in my favorite subject, Software Engineering. I often find myself being endulged in the various areas of expertise this industry has to offer.<br><br>
-
-									Though I’m sure I cannot possibly master all, I am hopeful that I will find whatever grips me the most and stick to it. Till then however, I will continue on my endeavor to find my path in this multi-tiered and incredibly nested field.<br><br>
-
-									As I try to find my way, I have had the experience of working with tremendous people, be it in class projects, university hackathons, or online repo’s. I hope the road I have ahead of me is as full of opportunities and experiences as my years at AAiT have been.</p>
-								</div>
-								<div class = "col-lg-3">
-									<a href = "resume.html">
-										<i class="fa fa-file" style = "font-size:5.75rem; position: absolute; top:10;right:10;"></i>
-										<!--<img src="Assets/Images/document.jpg" alt="Avatar" class="icon-link">-->
-									</a>
-									<br><br><br><br><br><br>
-									<a href = "https://www.github.com/semere01/">
-										<i class="fa fa-github" style = "font-size:6.25rem; position: absolute; top:10;right:10;"></i></a>
-										<!--<img src="Assets/Images/github.png" alt="Avatar" class="icon-link"></a>-->
-									<br><br><br><br><br><br>
-									
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Gallery Starts Here -->
-					<div class = "container-fluid">
-		<div class="row">
-			<div class = "col-lg-12" align = center>
-				<h3 id = "two"> Gallery </h3>
-			</div>
-		</div>
-		<div class = "row">
-			<div class = "column">
-				<img src = "Assets/Images/Teamwork.jpg" alt = "Semere's profile pic" object-fit = cover height = 200rem>
-			</div>
-			<div class = "column">
-				<img src = "Assets/Images/new.jpg" alt = "Semere's profile pic" object-fit = cover height = 200rem>
-			</div>
-			<div class = "column">
-				<img src = "Assets/Images/Gaming.jpeg" alt = "Semere's profile pic" object-fit = cover height = 200rem>
-			</div>
-		</div>
-		<div class = "row">
-			<div class = "column">
-				<img src = "Assets/Images/Mobile Programming.jpeg" alt = "Semere's profile pic" object-fit = cover height = 200rem>
-			</div>
-			<div class = "column">
-				<img src = "Assets/Images/Gaming.jpeg" alt = "Semere's profile pic" object-fit = cover height = 200rem>
-			</div>
-			<div class = "column">
-				<img src = "Assets/Images/Alone.jpeg" alt = "Semere's profile pic" object-fit = cover height = 200rem>
-			</div>
-		</div>
-		<div class = "row">
-			<div class = "column">
-				<img src = "Assets/Images/key.jpeg" alt = "Semere's profile pic" object-fit = cover height = 200rem>
-			</div>
-			<div class = "column">
-				<img src = "Assets/Images/k2.jpg" alt = "Semere's profile pic" object-fit = cover height = 200rem>
-			</div>
-			<div class = "column">
-				<img src = "Assets/Images/k3.jpg" alt = "Semere's profile pic" object-fit = cover height = 200rem>
-			</div>
-		</div>
-	</div>
-					<!-- Contact Starts Here -->
-					<div class = "container-fluid">
-						<div class="row">
-							<div class = "col-lg-12" align = center>
-								<h3 id = "three"> Contact </h3>
-							</div>
-						</div>
-						<div class = "row">
-							<div class = "col-lg-6">
-								<p align = "center" id = "contact">
-									se.semere.tereffe@gmail.com<br>
-									+251 98 487 3036<br>
-									Addis Ababa, Ethiopia<br>
-								</p>
-							</div>
-							<div class = "col-lg-6">
-
-								<div id = "f1">
-									<i class="fa fa-user" style = "font-size:2.8125rem; position: absolute; top:10;right:10;"></i>
-									<!--<img src = "Assets/Images/f1.PNG" id = "fImage">-->
-									<input id = "name">
-								</div>
-
-
-								<div id = "f1">
-									<i class="fa fa-envelope" style = "font-size:2.1325rem; position: absolute; top:10;right:10;"></i>
-									<!--<img src = "Assets/Images/f2.PNG" id = "fImage">-->
-									<input id = "email">
-								</div>
-
-
-								<div id = "f1">
-									<i class="fa fa-pencil-square-o" style = "font-size:2.8675rem; position: absolute; top:10;right:10;"></i>
-									<!--<img src = "Assets/Images/f3.PNG" id = "fImage">-->
-									<textarea id = "ta" cols = "100"></textarea>
-								</div>
-
-
-								<div id = "f1" align = left>
-									<button> Submit </button>
-								</div>
-
-							</div>
-						</div>
-					</div>
-
-					<footer class="page-footer font-small blue pt-4" style="background-color: #f6f6f6">
-					  <div class="container-fluid text-center text-md-left">
-					    <div class="row">
-					      <div class="col-md-6 mt-md-0 mt-3">
-					        <h5 class="text-uppercase">Get in touch!</h5>
-					        <p>You can use these links to find out more about me.<br></p>
-
-					      </div>
-					      <hr class="clearfix w-100 d-md-none pb-3">
-					      
-					      <div class="col-md-3 mb-md-0 mb-3">
-					      	<br>
-
-					        <ul class="list-unstyled">
-					        	<li>
-					            <a href=blog.html>My Blog</a>
-					          </li>
-					          <li>
-					            <a href="https://www.linkedin.com">LinkedIn</a>
-					          </li>
-					          <li>
-					            <a href="https://www.github.com">Github</a>
-					          </li>
-					          <li>
-					            <a href="https://twitter.com/Semere48492738">Twitter</a>
-					          </li>
-					        </ul>
-
-					      </div>
-					    </div>
-					  </div>
-					  
-					</footer>
+	<div class = "master-grid">
+		<div class = "master-grid-item sidenavbar">1</div>
+		<div class = "master-grid-item main">
+			<!-- Profile Image Here -->
+			<div class = "bg"></div>
+			<!-- About Section Here -->
+			<div class = "about-grid">
+				<div class = "about-header">
+					<p class = "my-name">Semere Tereffe</p>
 				</div>
-				<div class = "col-lg-2"></div>
+				<div class = "about-body"> 
+						
+						<p class = "content-paragraph">I believe I have been lucky enough to major in my favorite subject, Software Engineering. I often find myself being endulged in the various areas of expertise this industry has to offer.<br><br></p>
+						<p class = "content-paragraph">Though I’m sure I cannot possibly master all, I am hopeful that I will find whatever grips me the most and stick to it. Till then however, I will continue on my endeavor to find my path in this multi-tiered and incredibly nested field.<br><br></p>
+						<p class = "content-paragraph">As I try to find my way, I have had the experience of working with tremendous people, be it in class projects, university hackathons, or online repo’s. I hope the road I have ahead of me is as full of opportunities and experiences as my years at AAiT have been.</p>
+				 </div>
+				<div class = "about-side"> <div class = "resume-icon"></div> <p>Resume</p>  </div>
+				<div class = "about-side"> <div class = "git-icon"></div> <p>Github</p> </div>
 			</div>
-		</div>
+				
+			</div>
 	</div>
-
-
-
 </body>
