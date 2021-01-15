@@ -1,131 +1,134 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<style>
 		html,body{ height:98%; }
-.master-grid {
-	height:100%;
-  display: grid;
-  grid-gap: 10px;
-  padding: 10px;
-}
+		.master-grid {
+			height:100%;
+		  display: grid;
+		  grid-gap: 10px;
+		  padding: 10px;
+		}
+		body{font-family: "Book Antiqua",Georgia,serif;}
+		.master-grid-item {
+			height:95%;
+		  text-align: center;
+		  padding: 20px;
+		  font-size: 30px;
+		}
 
-.master-grid-item {
-	height:95%;
-  text-align: center;
-  padding: 20px;
-  font-size: 30px;
-}
+		.sidenavbar {
+		  grid-column: 1;
+		  grid-row: 1;
+		}
 
-.sidenavbar {
-  grid-column: 1;
-  grid-row: 1;
-}
+		.main {
+			overflow-y: auto;
+		  grid-column: 2 / span 10;
+		  grid-row: 1 ;
+		}
 
-.main {
-	overflow-y: auto;
-  grid-column: 2 / span 10;
-  grid-row: 1 ;
-}
+		.about-grid{
+			display: grid;
+		  grid-gap: 10px;
+		  padding: 10px;
+		  /*background-color: #2196F3;*/
+		}
 
-.about-grid{
-	display: grid;
-  grid-gap: 10px;
-  padding: 10px;
-  /*background-color: #2196F3;*/
-}
+		.about-header, .gallery-header{
+		  /*background-color: rgba(255, 255, 255, 0.8);*/
+		  text-align: center;
+		  grid-column: 1 / span 3;
+		  grid-row: 1;
+		}
+		.about-body{
+			/*width:50%;*/
+		  /*background-color: rgba(255, 255, 255, 0.8);*/
+			text-align: center;
+			grid-column: 1 / span 2;
+			grid-row: 2 / span 2;
+			}
+		.about-side{
+		  /*background-color: rgba(255, 255, 255, 0.8);*/
+			text-align: center;
+			grid-column:3/ span 1;
+		}
+		.content-paragraph{
+			font-family: "Book Antiqua",Georgia,serif;
+		    /*font-size: 18px;*/
+		    font-size: 1.125rem;
+		    /*line-height: 30px;*/
+		    line-height: 1.875rem;
+		    display: block;
+		    margin-block-start: 1em;
+		    margin-block-end: 1em;
+		    margin-inline-start: 0px;
+		    margin-inline-end: 0px;
+		    padding-left:18%;
+		    padding-right:18%;
+		    text-align: justify;
+			  text-justify: inter-word;
+		}
 
-.about-header{
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  grid-column: 1 / span 10;
-  grid-row: 1;
-}
-.about-body{
-	/*width:50%;*/
-  background-color: rgba(255, 255, 255, 0.8);
-	text-align: center;
-	grid-column: 3 / span 4;
-	grid-row: 2 / span 2;
-	}
-.about-side{
-  background-color: rgba(255, 255, 255, 0.8);
-	text-align: center;
-	grid-column:7/ span 2;
-}
-.content-paragraph{
-	font-family: "Book Antiqua",Georgia,serif;
-    /*font-size: 18px;*/
-    font-size: 1.125rem;
-    /*line-height: 30px;*/
-    line-height: 1.875rem;
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-left:18%;
-    padding-right:18%;
-    text-align: justify;
-	  text-justify: inter-word;
-}
+		.bg {
+		  /* The image used */
+		  background-image: url("Assets/images/Me2 - Copy.jpg");
 
-.bg {
-  /* The image used */
-  background-image: url("Assets/images/k3.jpg");
+		  /* Full height */
+		  height: 100%; 
 
-  /* Full height */
-  height: 100%; 
+		  /* Center and scale the image nicely */
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		}
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+		.my-name{
+		    font-size: 2.625rem;
+		    /*line-height: 1.875rem;*/
+		    display: block;
+		    font-family: "Trebuchet MS","Arial Narrow",Arial,sans-serif;
+		    font-weight: normal;
+		    text-transform: uppercase;
+		    color: #000;
+		    transition: 0.2s color linear;
 
-.my-name{
-    font-size: 2.625rem;
-    /*line-height: 1.875rem;*/
-    display: block;
-    font-family: "Trebuchet MS","Arial Narrow",Arial,sans-serif;
-    font-weight: normal;
-    text-transform: uppercase;
-    color: #000;
-    transition: 0.2s color linear;
+		}
+		.git-icon{
+			background-image: url("Assets/images/git/regular.jpg");
 
-}
-.git-icon{
-	background-image: url("Assets/images/git/regular.jpg");
+		  /* Full height */
+		  height: 30%; 
 
-  /* Full height */
-  height: 50%; 
+		  /* Center and scale the image nicely */
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: contain;
+		}
+		.git-icon:hover {
+			background-image: url("Assets/images/git/solid.jpg");
+		}
+		.resume-icon{
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.git-icon:hover {
-	background-image: url("Assets/images/git/solid.jpg");
-}
-.resume-icon{
-	background-image: url("Assets/images/resume/regular.jpg");
+		  /* Full height */
+		  height: 10%; 
+		  background-image: url("Assets/images/resume/regular.jpg");
 
-  /* Full height */
-  height: 50%; 
+		  /* Center and scale the image nicely */
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: contain;
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.resume-icon:hover {
-	background-image: url("Assets/images/resume/solid.jpg");
-}
-
-
-
+		}
+		
 	</style>
 </head>
 <body>
@@ -135,20 +138,47 @@
 			<!-- Profile Image Here -->
 			<div class = "bg"></div>
 			<!-- About Section Here -->
-			<div class = "about-grid">
-				<div class = "about-header">
-					<p class = "my-name">Semere Tereffe</p>
+			<div class = "row">
+				<div class = "col-md-12">
+					<div class = "about-header">
+						<p class = "my-name">Semere Tereffe</p>
+					</div>
 				</div>
-				<div class = "about-body"> 
-						
-						<p class = "content-paragraph">I believe I have been lucky enough to major in my favorite subject, Software Engineering. I often find myself being endulged in the various areas of expertise this industry has to offer.<br><br></p>
-						<p class = "content-paragraph">Though I’m sure I cannot possibly master all, I am hopeful that I will find whatever grips me the most and stick to it. Till then however, I will continue on my endeavor to find my path in this multi-tiered and incredibly nested field.<br><br></p>
-						<p class = "content-paragraph">As I try to find my way, I have had the experience of working with tremendous people, be it in class projects, university hackathons, or online repo’s. I hope the road I have ahead of me is as full of opportunities and experiences as my years at AAiT have been.</p>
-				 </div>
-				<div class = "about-side"> <div class = "resume-icon"></div> <p>Resume</p>  </div>
-				<div class = "about-side"> <div class = "git-icon"></div> <p>Github</p> </div>
+			</div>
+			<div class = "row">
+				<div class = "col-md-10">
+					<div class = "about-body"> 
+							<p class = "content-paragraph">I believe I have been lucky enough to major in my favorite subject, Software Engineering. I often find myself being endulged in the various areas of expertise this industry has to offer.<br><br></p>
+							<p class = "content-paragraph">Though I’m sure I cannot possibly master all, I am hopeful that I will find whatever grips me the most and stick to it. Till then however, I will continue on my endeavor to find my path in this multi-tiered and incredibly nested field.<br><br></p>
+							<p class = "content-paragraph">As I try to find my way, I have had the experience of working with tremendous people, be it in class projects, university hackathons, or online repo’s. I hope the road I have ahead of me is as full of opportunities and experiences as my years at AAiT have been.</p>
+					</div>
+				</div>
+				<div class = "col-md-2">
+					<div><div  class = "hover-logo1"><img src = "Assets/images/resume/regular.jpg" style = "max-width: 10%; padding-top: 25%;"></div> <p style="padding-top:0rem">Resume</p>  </div>
+					<div><img src = "Assets/images/git/regular.jpg" class = "hover-logo2" style = "max-width: 25%; padding-top: 25%;"> <p style="padding-top:0rem">Github</p>  </div>
+				</div>
+			</div>
+
+			<div class = "gallery-grid">
+				<div class = "gallery-header">
+					<p class = "my-name">Gallery</p>
+				</div>
+				<div class = "container">
+					<div class = "row" style = "max-height: 20rem">
+						<div class = "col-lg-8" style = "max-height: 20rem"> <img src = "Assets/images/k3.jpg" style = "height:80%; width:100%; object-fit: cover;"> </div>
+						<div class = "col-lg-4" style = "max-height: 20rem"> <img src = "Assets/images/k2.jpg" style = "height:80%; width:100%; object-fit: cover;"> </div>
+					</div>
+					<div class = "row" style = "max-height: 20rem">
+						<div class = "col-lg-4" style = "max-height: 20rem"> <img src = "Assets/images/k3.jpg" style = "height:80%; width:100%; object-fit: cover;"> </div>
+						<div class = "col-lg-8" style = "max-height: 20rem"> <img src = "Assets/images/k2.jpg" style = "height:80%; width:100%; object-fit: cover;"> </div>
+					</div><div class = "row" style = "max-height: 20rem">
+						<div class = "col-lg-8" style = "max-height: 20rem"> <img src = "Assets/images/k3.jpg" style = "height:80%; width:100%; object-fit: cover;"> </div>
+						<div class = "col-lg-4" style = "max-height: 20rem"> <img src = "Assets/images/k2.jpg" style = "height:80%; width:100%; object-fit: cover;"> </div>
+					</div>
+
 			</div>
 				
-			</div>
+		</div>
 	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
