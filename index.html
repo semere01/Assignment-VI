@@ -11,7 +11,7 @@
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<style>
-		html,body{ height:98%; padding:0; margin:0;}
+		html,body{ height:98%; padding:0; margin:0; width:100%;}
 		.master-grid {
 			height:100%;
 		  display: grid;
@@ -73,11 +73,12 @@
 		    margin-block-end: 1em;
 		    margin-inline-start: 0px;
 		    margin-inline-end: 0px;
-		    padding-left:18%;
-		    padding-right:18%;
+		    padding-left:12%;
+		    padding-right:12%;
 		    text-align: justify;
 			  text-justify: inter-word;
 		}
+
 
 		.bg {
 		  /* The image used */
@@ -158,12 +159,61 @@
     padding-left:2.5rem;
     min-height:8rem;
 }
+.side-nav:link {
+  text-decoration: none;
+  color: black;
+}
+
+/* visited link */
+.side-nav:visited {
+  text-decoration: none;
+  color: green;
+}
+
+/* mouse over link */
+.side-nav:hover {
+  text-decoration: none;
+  color: #CC3333;
+}
+
+/* selected link */
+.side-nav:active {
+  text-decoration: none;
+  color: blue;
+}
 	</style>
+}
 </head>
 <body>
 	<div class = "container">
 		<div class = "row">
-		<div class = "master-grid-item col-lg-2">1</div>
+		<div class = "master-grid-item col-lg-2">
+			<div style = "position:fixed;">
+				<div style = "position: absolute;top:50%;transform: translate(0%,50%);">
+					<a href = "#" class = "side-nav"><div>
+						<h2 style = "font-size: 2rem">ABOUT</h2><hr>
+						<p style = "font-size: 0.75rem">WHO I AM</p>
+					</div></a>
+					<a href = "#" class = "side-nav"><div>
+						<h2 style = "font-size: 2rem">GALLERY</h2><hr>
+						<p style = "font-size: 0.75rem">WHAT I DO</p>
+					</div></a>
+					<a href = "#" class = "side-nav"><div>
+						<h2 style = "font-size: 2rem">CONTACT</h2><hr>
+						<p style = "font-size: 0.75rem">LETS GET IN TOUCH</p>
+					</div></a>
+				</div>
+				<!-- <div style = "position: absolute;">
+					<h2>ABOUT</h2>
+					<p>WHO I AM </p>
+				</div>
+				<div style = "position: absolute;">
+					<h2>ABOUT</h2>
+					<p>WHO I AM </p>
+				</div> -->
+			</div>
+
+		</div>
 		<div class = "master-grid-item col-lg-10">
 			<!-- Profile Image Here -->
 			<div class = "bg"></div>
@@ -184,8 +234,8 @@
 					</div>
 				</div>
 				<div class = "col-md-2">
-					<div><div  class = "hover-logo1"><img src = "Assets/images/resume/regular.jpg" style = "max-width: 10%; padding-top: 25%;"></div> <p style="padding-top:0rem">Resume</p>  </div>
-					<div><img src = "Assets/images/git/regular.jpg" class = "hover-logo2" style = "max-width: 25%; padding-top: 25%;"> <p style="padding-top:0rem">Github</p>  </div>
+					<a class = "side-nav" href="#"><div><div  class = "hover-logo1"><img src = "Assets/images/resume/regular.jpg" style = "max-width: 10%; padding-top: 25%;"></div> <p style="padding-top:0rem">Resume</p>  </div></a>
+					<a class = "side-nav" href="#"><div><img src = "Assets/images/git/regular.jpg" class = "hover-logo2" style = "max-width: 25%; padding-top: 25%;"> <p style="padding-top:0rem">Github</p>  </div></a>
 				</div>
 			</div>
 
