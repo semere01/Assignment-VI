@@ -94,7 +94,7 @@
 		  background-size: cover;
 		}
 
-		.my-name{
+		.header{
 		    font-size: 2.625rem;
 		    /*line-height: 1.875rem;*/
 		    display: block;
@@ -105,6 +105,10 @@
 		    transition: 0.2s color linear;
 
 		}
+		.my-name{
+			padding-top:1rem;
+		}
+
 		.contact-info{
 			font-size: 2rem;
 			/*display: inline;*/
@@ -167,7 +171,7 @@
 /* visited link */
 .side-nav:visited {
   text-decoration: none;
-  color: green;
+  color: black;
 }
 
 /* mouse over link */
@@ -179,7 +183,7 @@
 /* selected link */
 .side-nav:active {
   text-decoration: none;
-  color: blue;
+  color: #FC3F3F;
 }
 	</style>
 }
@@ -190,15 +194,15 @@
 		<div class = "master-grid-item col-lg-2">
 			<div style = "position:fixed;">
 				<div style = "position: absolute;top:50%;transform: translate(0%,50%);">
-					<a href = "#" class = "side-nav"><div>
+					<a href = "index.html#about" class = "side-nav"><div>
 						<h2 style = "font-size: 2rem">ABOUT</h2><hr>
 						<p style = "font-size: 0.75rem">WHO I AM</p>
 					</div></a>
-					<a href = "#" class = "side-nav"><div>
+					<a href = "index.html#gallery" class = "side-nav"><div>
 						<h2 style = "font-size: 2rem">GALLERY</h2><hr>
 						<p style = "font-size: 0.75rem">WHAT I DO</p>
 					</div></a>
-					<a href = "#" class = "side-nav"><div>
+					<a href = "index.html#contact" class = "side-nav"><div>
 						<h2 style = "font-size: 2rem">CONTACT</h2><hr>
 						<p style = "font-size: 0.75rem">LETS GET IN TOUCH</p>
 					</div></a>
@@ -221,7 +225,7 @@
 			<div class = "row">
 				<div class = "col-md-12">
 					<div class = "about-header">
-						<p class = "my-name">Semere Tereffe</p>
+						<p class = "header my-name" id = "about">Semere Tereffe</p>
 					</div>
 				</div>
 			</div>
@@ -234,14 +238,14 @@
 					</div>
 				</div>
 				<div class = "col-md-2">
-					<a class = "side-nav" href="#"><div><div  class = "hover-logo1"><img src = "Assets/images/resume/regular.jpg" style = "max-width: 10%; padding-top: 25%;"></div> <p style="padding-top:0rem">Resume</p>  </div></a>
-					<a class = "side-nav" href="#"><div><img src = "Assets/images/git/regular.jpg" class = "hover-logo2" style = "max-width: 25%; padding-top: 25%;"> <p style="padding-top:0rem">Github</p>  </div></a>
+					<a class = "side-nav" href="resume.html"><div><div  class = "hover-logo1"><img src = "Assets/images/resume/regular.jpg" style = "max-width: 10%; padding-top: 25%;"></div> <p style="padding-top:0rem">Resume</p>  </div></a>
+					<a class = "side-nav" href="https://github.com/semere01"><div><img src = "Assets/images/git/regular.jpg" class = "hover-logo2" style = "max-width: 25%; padding-top: 25%;"> <p style="padding-top:0rem">Github</p>  </div></a>
 				</div>
 			</div>
 
 			<div class = "gallery-grid">
 				<div class = "gallery-header">
-					<p class = "my-name">Gallery</p>
+					<p class = "header" id = "gallery">Gallery</p>
 				</div>
 				<div class = "container">
 					<div class = "row">
@@ -261,7 +265,7 @@
 
 		<div class = "gallery-grid">
 				<div class = "gallery-header">
-					<p class = "my-name">Contact</p>
+					<p class = "header" id = "contact">Contact</p>
 				</div>
 				<div class = "container">
 					<div class = "row">
