@@ -1,119 +1,143 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+  	<title> Semere Tereffe | Blog</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-	<link rel = "stylesheet" type = "text/css" href = "Assets/CSS/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><!-- Importing JQuery -->
-	<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script><!-- Importing Popper -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><!-- Importing Bootstrap -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<style>
-		.parallax {
-		/* The image used */
-		background-image: url("Assets/Images/Me2 - Copy.jpg");
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="Assets/CSS/style.css">
 
-		/* Set a specific height */
-		min-height: 28.125rem; 
+	<link rel="preconnect" href="https://fonts.gstatic.com">
 
-		/* Create the parallax scrolling effect */
-		background-attachment: fixed;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		}
-	</style>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<title> Semere Tereffe </title>
 <body>
-	<div class="parallax"></div>
-	<!-- Sidebar -->
-	<div class="w3-sidebar w3-white w3-bar-block" style="width:12%" id = "fixed">
-			<a href="index.html#" class="w3-bar-item w3-button"><img src = "Assets/Images/aboutSB.PNG" alt = "About-side-bar" width = 178.125rem height = 93.75rem></a>
-			<a href="index.html#two" class="w3-bar-item w3-button"><img src = "Assets/Images/workSB.PNG" alt = "About-side-bar" width = 178.125rem height = 93.75rem></a>
-			<a href="index.html#three" class="w3-bar-item w3-button"><img src = "Assets/Images/contactSB.PNG" alt = "About-side-bar" width = 178.125rem height = 93.75rem></a>
-			<a href="blog.html" class="w3-bar-item w3-button"><img src = "Assets/Images/blogSB.PNG" alt = "About-side-bar" width = 178.125rem height = 93.75rem></a>
-	</div>
-	<div class = "all" style = "max-width: 88%; position:absolute; right:0;">
-		<div class = "container-fluid">
+	<nav class="navbar navbar-expand-md navbar-light bg-dark fff
+sticky-top"style="background-color: #e3f2fd;">
+
+ <li class="nav-item">
+ <a class="nav-link" href="index.html">Home</a>
+ </li>
+
+ <li class="nav-item">
+ <a class="nav-link" href="resume.html">My Resume</a>
+ </li>
+
+<li class="nav-item">
+ <a class="nav-link" href="blog.html">My Blog</a>
+ </li>
+ <li class="nav-item">
+ <a class="nav-link" href="contact.html">Contact Me</a>
+ </li>
+ </nav>
+	<div class = "container">
+		<div class = "row">
+		<div class = "master-grid-item col-lg-2 d-none d-lg-block">
+			<div style = "position:fixed;">
+				<div style = "position: absolute;top:50%;transform: translate(0%,50%);">
+					<a href = "index.html#about" class = "side-nav"><div>
+						<h2 style = "font-size: 2rem">ABOUT</h2><hr>
+						<p style = "font-size: 0.75rem">WHO I AM</p>
+					</div></a>
+					<a href = "index.html#gallery" class = "side-nav"><div>
+						<h2 style = "font-size: 2rem">GALLERY</h2><hr>
+						<p style = "font-size: 0.75rem">WHAT I DO</p>
+					</div></a>
+					<a href = "index.html#contact" class = "side-nav"><div>
+						<h2 style = "font-size: 2rem">CONTACT</h2><hr>
+						<p style = "font-size: 0.75rem">LETS GET IN TOUCH</p>
+					</div></a>
+				</div>
+				<!-- <div style = "position: absolute;">
+					<h2>ABOUT</h2>
+					<p>WHO I AM </p>
+				</div>
+				<div style = "position: absolute;">
+					<h2>ABOUT</h2>
+					<p>WHO I AM </p>
+				</div> -->
+			</div>
+
+		</div>
+		<div class = "master-grid-item col-lg-10">
+			<!-- Profile Image Here -->
+			<!-- <div class = "bg"></div> -->
+			<!-- About Section Here -->
 			<div class = "row">
-				<div class = "col-lg-2"></div>
-				<div class = "col-lg-8">
-					<!-- About Starts Here -->
-					<div>
-						<div class="container-fluid">
-							<div class="row">
-								<div class = "col-lg-12" align = center>
-									<h3 id = "one"> My Blog </h3>
-								</div>
-							</div>
-							<div class = "row">
+				<div class = "col-md-12">
+					<div class = "about-header">
+						<!-- <p class = "header my-name" id = "about">Semere Tereffe</p> -->
+					</div>
+				</div>
+			</div>
+			<div class = "row">
+				<div class = "row">
 								<div class="col-lg-12">
 									<section>
 										<p class = "title"> How are you doing with the COVID-19 quarantine?</p>
 										<article>
-											<p>
+											<p class = "content-paragraph">
 												Well, to be honest, I always spent my time at home even before all of this happened. Apart from going to campus for class lectures and lab sessions, I’d never find any reason to leave the comfort of my own home. To answer the question, with the quarantine in play, I have found myself trying to learn basics of backend web development. I am also progressing the working knowledge I have in Android Development. All of this keeps me occupied and lets the days go by without any anxiety over the state of the nation. 
 											</p>
 										</article>
-										<p class = "date"> April 23, 2010 : 1:22 PM </p><br>
+										<p class = "date content-paragraph"> April 23, 2010 : 1:22 PM </p><br>
 									</section>
 
 
 									<section>
 										<p class = "title"> What are your plans for the next 5 years?</p>
 										<article>
-											<p>
+											<p class = "content-paragraph">
 												There are so many different tangents one could take in this field; I’m not sure about which path I want to take. My top picks however would be something along the lines of systems engineering or backend development. These areas intrigue me because the opportunity of flexibility and optimization they provide. Right now however, I am focusing on getting through college with good grades. After that, I hope to see myself working in one of these areas.
 											</p>
 										</article>
-										<p class = "date"> April 18, 2020 : 3:35 PM </p><br>
+										<p class = "date content-paragraph"> April 18, 2020 : 3:35 PM </p><br>
 									</section>
 								</div>
 							</div>
-						</div>
-					</div>
-					<footer class="page-footer font-small blue pt-4" style="background-color: #f6f6f6">
-					  <div class="container-fluid text-center text-md-left">
-					    <div class="row">
-					      <div class="col-md-6 mt-md-0 mt-3">
-					        <h5 class="text-uppercase">Get in touch!</h5>
-					        <p>You can use these links to find out more about me.<br></p>
+			</div>
 
-					      </div>
-					      <hr class="clearfix w-100 d-md-none pb-3">
-					      
-					      <div class="col-md-3 mb-md-0 mb-3">
-					      	<br>
-
-					        <ul class="list-unstyled">
+			
+		<footer class="footer" style="background-color: #fcfcfc">
+      <div class="container">
+      	<div class = "row">
+      	<div class = "col-sm-6" align="left">
+      		<p style="font-size: 1.5rem"> Get in touch!</p>
+      		<p style="font-size: 1rem">Use these links to find out more about me!</p>
+      	</div>
+      	<div class = "col-sm-6" >
+      		<ul class="list-unstyled">
 					        	<li>
-					            <a href=blog.html>My Blog</a>
+					            <a href="blog.html" class = "footer-link">My Blog</a>
 					          </li>
 					          <li>
-					            <a href="https://www.linkedin.com">LinkedIn</a>
+					            <a href="https://www.linkedin.com" class = "footer-link">LinkedIn</a>
 					          </li>
 					          <li>
-					            <a href="https://www.github.com">Github</a>
+					            <a href="https://www.github.com" class = "footer-link">Github</a>
 					          </li>
 					          <li>
-					            <a href="https://twitter.com/Semere48492738">Twitter</a>
+					            <a href="https://twitter.com/Semere48492738" class = "footer-link">Twitter</a>
 					          </li>
 					        </ul>
+      	</div>
+      	<!-- <div class = "col-lg-4"></div> -->
 
-					      </div>
-					    </div>
-					  </div>  
-					</footer>
-				</div>
-				<div class = "col-lg-2"></div>
-			</div>
-		</div>
+
+
+
+        <!-- <span class="text-muted">Place sticky footer content here.</span> -->
+      </div></div>
+    </footer>
+		
+
+
+
+
+
 	</div>
-
-
-
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
