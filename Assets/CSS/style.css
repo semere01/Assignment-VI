@@ -89,7 +89,7 @@
 
 		.bg {
 		  /* The image used */
-		  background-image: url("../images/Me2 - Copy.jpg");
+		  background-image: url("../Images/Me2 - Copy.jpg");
 
 		  /* Full height */
 		  height: 45rem; 
@@ -121,7 +121,7 @@
 			/*display: inline;*/
 		}
 		.git-icon{
-			background-image: url("Assets/images/git/regular.jpg");
+			background-image: url("Assets/Images/git/regular.jpg");
 
 		  /* Full height */
 		  height: 30%; 
@@ -132,13 +132,13 @@
 		  background-size: contain;
 		}
 		.git-icon:hover {
-			background-image: url("Assets/images/git/solid.jpg");
+			background-image: url("Assets/Images/git/solid.jpg");
 		}
 		.resume-icon{
 
 		  /* Full height */
 		  height: 10%; 
-		  background-image: url("Assets/images/resume/regular.jpg");
+		  background-image: url("Assets/Images/resume/regular.jpg");
 
 		  /* Center and scale the image nicely */
 		  background-position: center;
